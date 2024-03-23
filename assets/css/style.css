@@ -521,71 +521,9 @@ input#searchInput {
 /* =========== Expertise end =========== */
 
 /* =========== Team start =========== */
-.team-section {
-    margin: 80px 0;
-}
-.team-title h2 {
-    color: #273742;
-}
-.team-title span {
-    color: #E99443;
-}
-.team-items-slider .slick-next:before {
-    font-family: FontAwesome;
-    content: "\2193";
-    color: #273742;
-}
-.team-items-slider .slick-prev:before {
-    font-family: FontAwesome;
-    content: "\2191";
-    color: #273742;
-}
-.team-items {
-    position: relative;
-}
-.corner_up {
-    position: absolute;
-    top: -50px;
-    left: 50px;
-}
-.corner_down {
-    position: absolute;
-    bottom: -25px;
-    right: 50px;
-}
-.image_itemm{
-    margin: 5px;
-    text-align: center;
-    position: relative;
-    border-radius: 5px;
-    overflow: hidden;
-}
-.image_itemm img {
-    margin: auto;
-    border-radius: 5px;
-    object-fit: cover;
-}
-.image_itemm:hover img {
-    transform: scale(1.1);
-    transition: .5s;
-}
-.details-over {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background: #00000063;
-    color: white;
-    border-radius: 5px;
-}
-.details-over p {
-    font-size: 14px;
-    font-weight: 450 !important;
-}
-.details-over small {
-    font-size: 12px;
-    font-weight: 400;
-}
+
+
+
 /* =========== Team end =========== */
 
 /* =========== testimonial start =========== */
@@ -595,9 +533,17 @@ input#searchInput {
 .testimonial-section h2{
     color: #273742;
 }
+.testimonial-section .test-slide {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.test-slide.slick-current>.testi_width{
+    transform: scale(1.1);
+    transition: all .5s ease-in-out;
+}
 .testi_width {
     color: #fff;
-    width: 50%;
+    /* width: 50%; */
     margin: 100px auto 20px;
     background: #273742;
     border-radius: 20px;
@@ -784,6 +730,9 @@ footer {
     /* =========== testimonial start =========== */
     .testi_width {
         width: 100%;
+    }
+    .test-slide.slick-current>.testi_width{
+        transform: scale(1);
     }
     /* =========== testimonial end =========== */
     
