@@ -423,6 +423,7 @@ input#searchInput {
 /* =========== popular start =========== */
 .popular-section {
     margin: 80px 0 50px;
+    overflow: hidden;
 }
 .popular-title h2 {
     color: #273742;
