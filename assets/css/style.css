@@ -9,7 +9,6 @@ body {
   font-family: "Readex Pro", sans-serif; 
 }
 
-
 /* =========== bannar start =========== */
 
 /* =========== bannar video and overlay style start =========== */
@@ -41,7 +40,6 @@ body {
     border-color: transparent !important;
     box-shadow: none !important;
 }
-
 /* =========== video and overlay start =========== */
 
 /* =========== header start =========== */
@@ -116,7 +114,6 @@ header nav {
     background-color: rgba(35, 52, 63, 0.5);
     border: 1px solid rgba(35, 52, 63, 0.5) !important;
     border-radius: 5px !important;
-
 }
 .nav-item:hover .dropdown-menu {
     display: block;
@@ -126,9 +123,7 @@ header nav {
     left: 0;
     animation: slide_up 0.3s ease-in-out;
 }
-
 @keyframes slide_up {
-
     0% {
         top: 140%;
         opacity: .2;
@@ -138,7 +133,6 @@ header nav {
         opacity: 1;
     }
 }
-
 .dropdown ul li a {
     background-color: rgba(35, 52, 63, 0.5);
     color: white;
@@ -150,47 +144,6 @@ header nav {
     color: white;
     border-radius: 5px;
 }
-
-
-/* for slide animation in progress */
-/* @keyframes slideleft {
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(-30%, 0, 0);
-        transform: translate3d(-30%, 0, 0);
-    }
-    100% {
-        opacity: 1;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-    
-}
-.dropdown-menu>:nth-child(1) {
-    animation: slideleft 0.3s ease-in;
-    animation-delay: 0.2s;
-}
-.dropdown-menu>:nth-child(2) {
-    animation: slideleft 0.3s ease-in;
-    animation-delay: 0.3s;
-
-}
-.dropdown-menu>:nth-child(3) {
-    animation: slideleft 0.3s ease-in;
-    animation-delay: 0.4s;
-
-}
-.dropdown-menu>:nth-child(4) {
-    animation: slideleft 0.3s ease-in;
-    animation-delay: 0.5s;
-
-}
-.dropdown-menu>:nth-child(5) {
-    animation: slideleft 0.3s ease-in;
-    animation-delay: 0.6s;
-
-} */
-
 .cnt .icon img {
     margin: 0 10px;
 }
@@ -299,7 +252,6 @@ input#searchInput {
 .center-slide.slick-current img {
     transform: scale(1.4);
 }
-
 /* =========== branding end =========== */
 
 /* =========== service start =========== */
@@ -341,15 +293,13 @@ input#searchInput {
 }
 .services_slide .item .card {
     align-items: center;
-    /* margin: 10px 0; */
+    margin: 40px;
     justify-content: center;
+    /* width: 100%; */
 }
 .item.slick-current .card {
     transform: scale(1.1);
-    transition: all .5s ease-in-out;
-}
-.services_slide .item {
-    margin: 20px 30px ;
+    transition: all .5s ease;
 }
 .cdesign { 
     min-height: 400px;
@@ -358,7 +308,6 @@ input#searchInput {
     font-size: 18px;
     color:#E99443;
     text-align: center;
-
 }
 .cdesign p {
     font-size: 16px;
@@ -492,7 +441,7 @@ input#searchInput {
 
 /* =========== Expertise start =========== */
 .expertise-section {
-    margin: 80px 0 50px;
+    margin: 80px 0 100px;
 }
 .expertise-title h2 {
     color: #273742;
@@ -521,9 +470,36 @@ input#searchInput {
 /* =========== Expertise end =========== */
 
 /* =========== Team start =========== */
-
-
-
+.team_item {
+    position: relative;
+    overflow: hidden;
+    margin: auto 10px;
+    border-radius: 10px;
+}
+.team_item .mem-image img {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+.details-over {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 20px;
+    z-index: 2;
+}
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    color: transparent;
+    background-image: linear-gradient(180deg, transparent 60%, #0A3037);
+    z-index: 1;
+}
 /* =========== Team end =========== */
 
 /* =========== testimonial start =========== */
@@ -534,29 +510,29 @@ input#searchInput {
     color: #273742;
 }
 .testimonial-section .test-slide {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 25px;
 }
-.test-slide.slick-current>.testi_width{
-    transform: scale(1.1);
-    transition: all .5s ease-in-out;
+.test-slide.slick-current>.card{
+    transform: scale(1);
+    transition: all .5s ease;
 }
-.testi_width {
-    color: #fff;
-    /* width: 50%; */
-    margin: 100px auto 20px;
-    background: #273742;
+.test-slide .card {
+    transform: scale(0.9);
     border-radius: 20px;
-    padding: 10px 40px;
+    color: #a19b9b !important;
+    padding-bottom: 20px;
+    border: 3px solid rgba(139, 132, 132, 0.1);
 }
-.testi_width img {
+.test-slide .card .card-body h1, h2, h3, h4, h5, h6 {
+    text-transform: capitalize;
+}
+.test-slide .card .card-body img {
     max-height: 120px;
     width: 120px !important;
-    margin: 0 auto !important;
-    margin-top: -50px !important;
     border-radius: 50%;
-    border: 5px solid #ffffff;
-    outline: 5px solid #273742;
+    margin: 20px auto 20px !important;
+    border: 10px solid #fffdfd;
+    box-shadow: 0px 0px 10px 0px rgb(169 149 149 / 20%);
 }
 .testimonial-slider .slick-next:before {
     font-family: FontAwesome;
@@ -569,10 +545,10 @@ input#searchInput {
     color: #273742;
 }
 .rating {
-    color: rgb(247, 237, 237);
+    color: #273742;
 }
 .rating i:nth-last-child(1) {
-    color: rgb(178, 161, 161) !important;
+    color: #88898b !important;
 }
 /* =========== testimonial end =========== */
 
@@ -620,8 +596,6 @@ footer {
 /* =========== footer start =========== */
 
 
-
-
 /* =========== Responsive start =========== */
 @media (max-width: 576px) {
 
@@ -634,24 +608,30 @@ footer {
     }
     /* =========== header end =========== */
 
+    /* =========== banding start =========== */
+    .center-slide.slick-current img {
+        transform: initial;
+    }
+    /* =========== banding end =========== */
+
     /* =========== service start =========== */
     .services_slide .item .card {
         align-items: center;
         justify-content: center;
-    }
-    .core {
-        position: absolute;
-        bottom: -15px !important;
-        right: 0 !important;
+        width: 100% !important;
+        margin: auto !important;
+    }    
+    .services_slide .item  {
+        margin:  auto 10px !important;
     }
     .cdesign h5{
-        font-size: 18px !important;
+        font-size: 20px !important;
     }
     .cdesign p {
-        font-size: 16px !important;
+        font-size: 18px !important;
     }
     .cdesign ul li{
-        font-size: 14px !important;
+        font-size: 16px !important;
     }
     /* =========== service end =========== */
 
@@ -664,19 +644,13 @@ footer {
 
     /* =========== popular start =========== */
     .popular-section .nav {
-        justify-content: center !important;
-        display: block;
+        justify-content: space-evenly !important;
     }
     .popular-section .btn-item button {
         width: 100%;
     }
     /* =========== popular end =========== */
     
-    /* =========== testimonial start =========== */
-    .testi_width {
-        width: 100%;
-    }
-    /* =========== testimonial end =========== */
 }
 
 
@@ -709,8 +683,32 @@ footer {
     /* =========== wellcome end =========== */
     
     /* =========== service start =========== */
+
+    .services_slide .item .card {
+        align-items: center;
+        justify-content: center;
+        margin: auto !important;
+        width: 100% !important;
+        padding: 10px;
+    }    
+    .services_slide .item  {
+        margin:  auto 10px !important;
+    }
+
+    .cdesign h5{
+        font-size: 18px !important;
+    }
+    .cdesign p {
+        font-size: 14px !important;
+    }
+    .cdesign ul li{
+        font-size: 12px !important;
+    }
+    .core {
+        display: none;
+    }
     .item.slick-current .card {
-        transform: scale(1);
+        transform: initial;
     }
     /* =========== service end =========== */
 
@@ -728,11 +726,8 @@ footer {
     /* =========== popular end =========== */
     
     /* =========== testimonial start =========== */
-    .testi_width {
-        width: 100%;
-    }
-    .test-slide.slick-current>.testi_width{
-        transform: scale(1);
+    .testimonial-section .test-slide {
+        margin: 5px;
     }
     /* =========== testimonial end =========== */
     
@@ -764,6 +759,11 @@ footer {
     }
     .navbar {
         background-color: #273742;
+    }
+    .nav-item:hover .dropdown-menu {
+        display: block;
+        border-radius: 5px !important;
+        position: initial;
     }
     .dropdown-menu {
         width: 100%;
@@ -817,8 +817,18 @@ footer {
         bottom: 0;
         right: 0;
     }
-    .services_slide .item {
-        margin: 20px 10px ;
+    .services_slide .item .card {
+        align-items: center;
+        justify-content: center;
+        margin: 20px auto !important;
+        width: 100% !important;
+        /* padding: 10px; */
+    }    
+    .services_slide .item  {
+        margin:  auto 10px !important;
+    }
+    .cdesign { 
+        min-height: 350px;
     }
     .cdesign h5{
         font-size: 16px;
@@ -832,8 +842,12 @@ footer {
     /* =========== service end =========== */
 
     /* =========== testimonial start =========== */
-    .testi_width {
-        width: 80%;
+    .test-slide.slick-current>.card{
+        transform: initial;
+    }
+    .test-slide .card {
+        transform: initial;
+        width: 100%;
     }
     /* =========== testimonial end =========== */
     
